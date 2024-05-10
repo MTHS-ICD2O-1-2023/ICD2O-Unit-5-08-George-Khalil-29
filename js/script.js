@@ -14,7 +14,7 @@ function longDivision() {
 
     for (let i = 0; i < 3; i++) {
         if (remainder >= divisor) {
-            steps += `${remainder} - ${divisor} = ${remainder - divisor} ☚ ${i === 0 ? "first" : i === 1 ? "second" : "third"} time<br>`;
+            steps += `${remainder} - ${divisor} = ${remainder - divisor}  ${i === 0 ? "first" : i === 1 ? "second" : "third"} time<br>`;
             remainder -= divisor;
             quotient += 1;
         }
