@@ -12,12 +12,16 @@ function longDivision() {
     let remainder = dividend;
     let steps = "";
 
-    for (let i = 0; i < 3; i++) {
+    let i = 0;
+    while (i < 3) {
         if (remainder >= divisor) {
             steps += `${remainder} - ${divisor} = ${remainder - divisor}  ${i === 0 ? "first" : i === 1 ? "second" : "third"} time<br>`;
             remainder -= divisor;
             quotient += 1;
+        } else {
+            break; // exit the loop if remainder is less than divisor
         }
+        i++;
     }
 
     steps += `Therefore ${dividend} / ${divisor} = ${quotient} R ${remainder}`;
